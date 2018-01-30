@@ -1,0 +1,106 @@
+body {
+  padding-top: 50px;
+  width:100%;
+  margin:auto;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.container {
+  margin-left:20px;
+  margin-right:20px;
+}
+#header_info {
+  height: 400px;
+  width: 1000px;
+}
+
+#rest {
+  width: 1000px;
+}
+
+.publication {
+/*
+  margin-top: 2px;
+  margin-bottom: 2px;
+*/
+  width: 1200px;
+  height: 300px;
+}
+
+.thumb {
+  width: 30%;
+  float: left;
+}
+
+.thumb_img {
+  width:100%;
+  height:100%;
+}
+.pub {
+  text-align:left;
+}
+
+#header_img {
+ float: left; 
+ margin-right:0px;
+}
+
+#bio {
+ margin-top: 0px;
+ padding: 0px;
+ float: right;
+ width: 60%;
+ text-align: left;
+ margin-left:30px;
+}
+
+.email {
+  position: relative;
+  font-size: 1.5em;
+}
+
+.headings {
+  position: relative;
+  color: #007299;
+}
+
+.authors {
+  margin: 0px;
+  font-size:1.2em;
+}
+
+.venue {
+  margin-top: 2px;
+  font-size: 1.2em;
+}
+
+.btn-sm {
+    background: none; 
+    color: #111111;
+    /*
+    padding: 12px 22px;
+    */
+    border: 1px solid #111111;
+    padding:1px 1px;
+    font-size: 1.5em;
+}
+
+.link {
+  font-size: 1.2em;
+  margin-top: 2px;
+  padding: 2px;
+}
+
+.btn-sm:hover, .btn-primary:focus, .btn-primary:active {
+    background: none; 
+    color: #007299;
+    box-shadow:none;
+}
+
+.carousel-caption {
+   color: black;
+}
+  

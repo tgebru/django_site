@@ -1,0 +1,94 @@
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address,
+variable, form, fieldset, blockquote {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  font-weight: normal;
+}
+ol {
+  margin-left: 1.4em;
+  list-style: decimal;
+}
+ul {
+  margin-left: 1.4em;
+  list-style:square;
+}
+
+img {
+  padding:0;
+  width:auto;
+  height:200;
+}
+
+#all
+{
+  overflow:wrap;
+  width:1100px;
+  height:auto;
+  margin-left:10px;
+  margin-top:20px;
+  margin-bottom:20px;
+}
+
+#top,#bottom
+{
+  margin-top:5px;
+  margin-bottom:5px;
+  margin-left:5px;
+  margin-right:5px;
+  height: auto;
+  display:inline;
+}
+#left,#right,#right_long
+{
+  overflow:wrap;
+  margin-top:5px;
+  margin-left:2px;
+  margin-right:2px;
+  display:block;
+  float:left;
+}
+#left_bottom
+{
+  margin-top:5px;
+}
+#left
+{
+  /*width: 400px;*/
+  width=500px;
+  height:auto;
+}
+#right
+{
+  /*width:650;*/
+  width:550;
+  height:auto;
+}
+#right_long,#right-top
+{
+ height:auto;
+ /*width:650;*/
+ width:550;
+}
+#right-top,#right-bottom
+{
+ height:auto;
+ display:table;
+}
+.bold_word
+{
+ font-weight:bold;
+}
+#floated_image
+{ 
+ float:left;
+}
+#logout
+{
+  float:right;
+  margin-right:10px;
+}
+.table
+{
+  vertical-align:center;
+}

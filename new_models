@@ -1,0 +1,16 @@
+class PositiveExamples(models.Model):
+    id = models.IntegerField(primary_key=True)
+    example_id = models.IntegerField(blank=True, null=True)
+    group_id = models.IntegerField(blank=True, null=True)
+    rank = models.IntegerField(blank=True, null=True)
+    class Meta:
+        managed = False
+        db_table = 'positive_examples'
+
+class GroupNames(models.Model):
+    id = models.IntegerField(primary_key=True)
+    group_id = models.IntegerField(blank=True, null=True)
+    group_name = models.TextField(blank=True)
+    class Meta:
+        managed = False
+        db_table = 'group_names'

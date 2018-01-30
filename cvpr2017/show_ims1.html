@@ -1,0 +1,39 @@
+{% load staticfiles %}
+<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.9.1.js"></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<link rel="stylesheet" href="{% static "css/style.css"%}">
+<script>
+  $( document ).ready(function() {
+    {% for im_type, im_source in im_sources %}
+      {% for splits,im_dicts in im_source %}
+        {% for im in im_dict %}
+           var canvas_{{im_type}}_{{split}}_{{forloop.counter}} = document.getElementById("img_div_{{im_type}}_{{split}}_{{forloop.counter}}");
+           var img_{{im_type}}_{{split}}_{{forloop.counter}} = new Image;
+           var context_{{im_type}}_{{split}}_{{forloop.counter}} = canvas_{{im_type}}_{{split}}_{{forloop.counter}}.getContext('2d');
+           img_{{im_type}}_{{split}}_{{forloop.counter}}.onload = function() {
+             var bbox_x1 = im.x1;
+             var bbox_width = im.x2-im.x1;
+             var bbox_y1 = im.y1
+             var bbox_height = im.y2-im.y1;
+        
+             var sourceX= Math.max(0,bbox_x1-10);
+             var sourceY= Math.max(0,bbox_y1-10);
+             var sourceWidth=bbox_width+10;
+             var sourceHeight=bbox_height+10;
+
+             var aspect_ratio=sourceHeight/sourceWidth;
+             var destWidth = Math.min(sourceWidth, canvas_{{im_type}}_{{split}}_{{forloop.counter}}.width)
+             var destHeight=Math.min(aspect_ratio*destWidth,canvas_{{im_type}}_{{split}}_{{forloop.counter}}.height);
+
+             var destX=10;
+             var destY=10;
+             //draw bounding box
+             context_{{im_type}}_{{split}}_{{forloop.counter}}.drawImage(img_{{im_type}}_{{split}}_{{forloop.counter}}, sourceX, sourceY, sourceWidth, sourceHeight, destX, destY, destWidth, destHeight);
+          }
+          img_{{im_type}}_{{split}}_{{forloop.counter}}.src = '{{im.url}}';
+        {% endfor %}
+      {% endfor %}
+    {% endfor %}
+})
+</script>
