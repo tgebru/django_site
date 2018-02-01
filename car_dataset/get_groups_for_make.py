@@ -1,10 +1,13 @@
 import os
 import sys
 import pickle
-import mysql.connector
+#import mysql.connector
+import MySQLdb
 
-cnx = mysql.connector.connect(host="imagenet",port=3306,user="tgebru",passwd="",db="geo")
-cursor=cnx.cursor()
+db=MySQLdb.connect(host="imagenet", port=3306, user="tgebru", passwd="", db="geo")
+#cnx = mysql.connector.connect(host="imagenet",port=3306,user="tgebru",passwd="",db="geo")
+#cursor=cnx.cursor()
+cursor=db.cursor()
 
 file_dir='/afs/cs.stanford.edu/u/tgebru/cars/streetview_labeling/mysite/car_dataset'
 makes=open(os.path.join(file_dir,'makes.txt'),'rb').readlines()
@@ -13,7 +16,7 @@ make_group_dict=dict(zip(makes,[[]]*len(makes)))
 
 for make_ind,make in enumerate(makes):
   print('processing %s %d out of %d'%(make,make_ind,len(makes)))
-  sql_s='select distinct(group_id) from geocars.synsets'
+  sql_s='select distinct(group_id) from geocars.synsets where make="%s"'%make
   cursor.execute(sql_s)
   groups=cursor.fetchall()
   for group in groups:

@@ -21,13 +21,13 @@ make_model_dict=pickle.load(open(os.path.join(file_dir,'make_model_dict.p'), 'rb
 
 
 #Image URLs
-train_web_dict=pickle.load(open(os.path.join(file_dir, 'train_web.p'),'rb'))
-val_web_dict=pickle.load(open(os.path.join(file_dir, 'val_web.p'),'rb'))
-test_web_dict=pickle.load(open(os.path.join(file_dir, 'test_web.p'),'rb'))
+#train_web_dict=pickle.load(open(os.path.join(file_dir, 'train_web.p'),'rb'))
+#val_web_dict=pickle.load(open(os.path.join(file_dir, 'val_web.p'),'rb'))
+#test_web_dict=pickle.load(open(os.path.join(file_dir, 'test_web.p'),'rb'))
 
-train_gsv_dict=pickle.load(open(os.path.join(file_dir, 'train_gsv.p'),'rb'))
-val_gsv_dict=pickle.load(open(os.path.join(file_dir, 'val_gsv.p'),'rb'))
-test_gsv_dict=pickle.load(open(os.path.join(file_dir, 'test_gsv.p'),'rb'))
+#train_gsv_dict=pickle.load(open(os.path.join(file_dir, 'train_gsv.p'),'rb'))
+#val_gsv_dict=pickle.load(open(os.path.join(file_dir, 'val_gsv.p'),'rb'))
+#test_gsv_dict=pickle.load(open(os.path.join(file_dir, 'test_gsv.p'),'rb'))
 
 #Image dictss
 web_dict=pickle.load(open(os.path.join(file_dir,'web_dict.p'),'rb'))
